@@ -6,11 +6,12 @@ Qwen3 API 测试脚本
 3. 函数调用（Tool Calling）
 """
 
+import os
 import httpx
 import json
 
-# 配置
-DASHSCOPE_API_KEY = "sk-5daa31fc7cc44a60a5ea6b660c1b6ba9"
+# 配置：从环境变量读取，避免提交敏感信息
+DASHSCOPE_API_KEY = os.environ.get("DASHSCOPE_API_KEY", "").strip()
 MODEL_NAME = "qwen3-max"
 BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 
@@ -315,6 +316,9 @@ def test_stream_function_call():
 
 
 if __name__ == "__main__":
+    if not DASHSCOPE_API_KEY:
+        print("请设置环境变量 DASHSCOPE_API_KEY 后再运行测试（例如：export DASHSCOPE_API_KEY=your_key）")
+        exit(0)
     print("\n" + "="*60)
     print("Qwen3 API 测试")
     print(f"模型: {MODEL_NAME}")

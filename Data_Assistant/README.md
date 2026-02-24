@@ -2,6 +2,8 @@
 
 基于自然语言的智能数据分析系统：用文字提问即可查询数据库、生成 SQL、展示图表与数据表格。支持多会话管理、流式回答与多种图表类型切换。
 
+**English**: [README_EN.md](README_EN.md)
+
 ![智能数据分析](https://img.shields.io/badge/智能数据分析-NL2SQL-blue)  
 FastAPI · React · LangChain · Qwen · ECharts
 
@@ -31,14 +33,12 @@ FastAPI · React · LangChain · Qwen · ECharts
 
 ### 1. 克隆项目
 
-```bash
-git clone https://github.com/<你的用户名>/Data_Assistant.git
-cd Data_Assistant
-```
+本项目位于 [VibeCoding](https://github.com/amydevya/VibeCoding) 仓库内，克隆后进入子目录即可：
 
-（首次推送到 GitHub：在 GitHub 新建仓库 `Data_Assistant` 后，在项目目录执行：  
-`git remote add origin https://github.com/<你的用户名>/Data_Assistant.git`  
-`git push -u origin main`）
+```bash
+git clone https://github.com/amydevya/VibeCoding.git
+cd VibeCoding/Data_Assistant
+```
 
 ### 2. 后端
 
@@ -94,7 +94,8 @@ Data_Assistant/
 │   └── package.json
 ├── docs/                    # 文档与验证清单
 ├── .gitignore
-└── README.md
+├── README.md                # 中文说明
+└── README_EN.md             # English
 ```
 
 ---
